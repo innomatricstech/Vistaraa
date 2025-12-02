@@ -1,0 +1,158 @@
+:root {
+  --sadhana-orange: #ff6600;
+  --sadhana-red-light: #f77f00;
+  --sadhana-text-color: #333;
+}
+
+.shipping-policy-page {
+  background-color: #f8f8f8;
+  color: var(--sadhana-text-color);
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- Header Section --- */
+.shipping-header {
+  background: var(--sadhana-orange);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.shipping-header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.shipping-header p {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* --- Policy Section --- */
+.policy-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.policy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.policy-card .policy-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.policy-card .policy-title svg {
+  color: var(--sadhana-orange);
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+.policy-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.policy-card li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.policy-card li::before {
+  content: "●";
+  color: var(--sadhana-orange);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 0.75rem;
+}
+
+.red-highlight {
+  background: #fff4f0;
+}
+
+.red-highlight li::before {
+  color: var(--sadhana-red-light);
+}
+
+/* --- Help Section --- */
+.help-card {
+  background-color: #fff0e6;
+  border: 1px solid #ffbb80;
+  border-radius: 12px;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 102, 0, 0.3);
+}
+
+.help-card h4 {
+  color: #c2410c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.help-card h4 svg {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+.help-card p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.contact-btn {
+  background-color: var(--sadhana-orange);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #e05c00;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.5);
+}
+
+/* --- Animations --- */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

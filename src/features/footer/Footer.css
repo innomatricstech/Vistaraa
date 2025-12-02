@@ -1,0 +1,125 @@
+/* Footer.css */
+
+/* Define a keyframe animation for a subtle bounce/wiggle effect */
+@keyframes buttonWiggle {
+
+  0%,
+  100% {
+    transform: translateY(-5px) scale(1.05);
+  }
+
+  50% {
+    transform: translateY(-8px) scale(1.07);
+    /* Deeper lift in the middle */
+  }
+
+  25%,
+  75% {
+    transform: translateY(-5px) scale(1.03);
+  }
+}
+
+/* Custom dark color for the footer background */
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+/* Styling for Headings */
+.footer-heading {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.col-md-3:first-child .footer-heading {
+  margin-top: 0.5rem;
+}
+
+/* Logo and text styling */
+.footer-logo-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.footer-logo-text {
+  font-weight: bold;
+  /* Teal/Turquoise accent color */
+  color: skyblue;
+}
+
+/* General body text style */
+.footer-text,
+.footer-address,
+.col-md-3 p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+}
+
+/* Copyright text style */
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.5;
+}
+
+/* Link styling */
+.list-unstyled a,
+.col-md-3 p a {
+  font-size: 0.95rem;
+  color: #b0b0b0 !important;
+  text-decoration: none;
+  /* ANIMATION: Enhanced transitions for multiple properties */
+  transition: color 0.3s ease-in-out, transform 0.2s ease-out, font-size 0.1s;
+}
+
+.list-unstyled a:hover,
+.col-md-3 p a:hover {
+  /* Teal/Turquoise accent color on hover */
+  color: #008080 !important;
+  /* ANIMATION: Noticeable slide and subtle scale up */
+  transform: translateX(8px) scale(1.02);
+  font-weight: 500;
+  /* Makes the text look bolder/more important */
+}
+
+/* Registered Office text color */
+.text-warning {
+  color: #008080 !important;
+  font-weight: 700 !important;
+}
+
+/* Scroll-to-top button styling */
+.scroll-to-top-container {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.scroll-to-top-btn {
+  background-color: #008080;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  /* ANIMATION: Important for smooth transitions */
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 12px rgba(0, 128, 128, 0.6);
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #006666;
+  /* ANIMATION: Apply the keyframe animation */
+  animation: buttonWiggle 0.8s infinite;
+  box-shadow: 0 8px 20px rgba(0, 128, 128, 0.8);
+}

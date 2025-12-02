@@ -1,0 +1,82 @@
+.banner-container {
+  background: #e3e5e5;
+  padding: 2rem 1rem; /* Default padding for desktop/large screens */
+  border-radius: 0px 0px 30px 40px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* CAROUSEL FULL WIDTH ADJUSTMENT */
+/* This ensures the carousel spans the full width of the parent's content area */
+.carousel-custom {
+  width: 100%;
+}
+
+/* Banner Text Styles (if uncommented in JS) */
+.banner-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Carousel Image Styles (Desktop/Default) */
+.carousel-custom .carousel-item img {
+  border-radius: 10px;
+  /* Fixed height for desktop/larger screens */
+  height: 300px;
+  /* object-fit: contain;  */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* ------------------------------------------- */
+/* Media Queries for Responsiveness */
+/* ------------------------------------------- */
+
+/* Standard Tablet/Smaller Desktop (up to 992px) */
+@media (max-width: 992px) {
+  .carousel-custom .carousel-item img {
+    /* Slightly smaller height on tablets */
+    height: 250px; 
+  }
+}
+
+/* Standard Mobile Devices (up to 768px) */
+@media (max-width: 768px) {
+  .banner-container {
+    /* Reduced horizontal padding to allow more space for the full-width carousel */
+    padding: 1.5rem 0.5rem; 
+    border-radius: 0px 0px 20px 20px;
+  }
+  
+  .banner-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+
+  .carousel-custom .carousel-item img {
+    height: 180px; 
+  }
+}
+
+/* Smaller Mobile Devices (up to 576px) */
+@media (max-width: 576px) {
+  .carousel-custom .carousel-item img {
+    height: 150px; 
+  }
+}

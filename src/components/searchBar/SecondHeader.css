@@ -1,0 +1,194 @@
+/* 🔥 Shopclues-Specific Colors */
+:root {
+    /* Main color from the image (Teal/Aqua) */
+    --shopclues-teal: #00a69a;
+    /* Slightly darker for hover/active */
+    --shopclues-teal-dark: #00897b;
+    /* The secondary red-orange from the main Navbar */
+    --shopclues-red-orange: #ff6e40;
+    --text-white: #ffffff;
+    --text-dark: #333333;
+    --max-content-width: 1400px;
+    --padding-sides: 15px;
+}
+
+/* -------------------- SECOND HEADER WRAPPER -------------------- */
+
+.second-header-wrapper {
+    /* This wrapper helps center the content if the main layout is max-width */
+    width: 100%;
+    background-color: var(--shopclues-teal);
+    /* Full-width teal bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 998;
+}
+
+.second-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    color: var(--text-white);
+
+    /* Content Centering within the wrapper */
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 var(--padding-sides);
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+/* -------------------- MAIN MENU BAR -------------------- */
+
+.menu-left {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff40 transparent;
+    flex-grow: 1;
+}
+
+.menu-left::-webkit-scrollbar {
+    height: 0;
+}
+
+/* Menu List - The horizontal row of links */
+.menu-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+.menu-item {
+    margin-right: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+/* Link Style */
+.menu-item .menu-link-custom {
+    color: var(--text-white);
+    text-decoration: none;
+    display: block;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+/* Hover/Active Style: */
+.menu-item:hover,
+.menu-item.active {
+    background-color: var(--shopclues-teal-dark);
+}
+
+.menu-item:hover .menu-link-custom,
+.menu-item.active .menu-link-custom {
+    color: var(--shopclues-red-orange);
+}
+
+/* Hiding the "ALL CATEGORIES" button on desktop */
+.menu-item.all {
+    display: none;
+}
+
+.festival-offer {
+    display: none;
+}
+
+
+/* -------------------- MOBILE STYLES (Focus on the dropdown/overlay) -------------------- */
+
+@media (max-width: 992px) {
+    .second-header {
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Show ALL CATEGORIES button on mobile */
+    .menu-item.all {
+        display: flex;
+        align-items: center;
+        background-color: var(--shopclues-teal-dark);
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        border-radius: 3px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .menu-icon {
+        margin-right: 5px;
+        font-size: 1rem;
+    }
+
+    /* Hide the horizontal menu list by default on mobile */
+    .menu-list {
+        display: none;
+    }
+
+    /* Mobile Menu Dropdown (When active) */
+    .menu-list.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 280px;
+        background: var(--shopclues-teal-dark);
+        padding: 0;
+        margin: 0;
+        z-index: 1030;
+        overflow-y: auto;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .menu-list.active .menu-item {
+        height: auto;
+        width: 100%;
+        font-size: 1rem;
+        text-align: left;
+        padding: 12px 15px;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-transform: none;
+        font-weight: normal;
+    }
+
+    .menu-item-mobile-icon {
+        margin-right: 10px;
+        color: var(--shopclues-red-orange);
+        font-size: 1.2rem;
+    }
+
+    .menu-list.active .menu-item:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Close Button for Mobile Menu */
+    .close-icon {
+        position: fixed;
+        top: 10px;
+        left: 240px;
+        font-size: 2rem;
+        color: var(--text-white);
+        cursor: pointer;
+        z-index: 1035;
+        background: var(--shopclues-teal-dark);
+        padding: 5px;
+        border-radius: 50%;
+    }
+}

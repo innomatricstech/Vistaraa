@@ -1,0 +1,271 @@
+/* 🔥 GLOBAL COLORS (Shopclues-like Theme) */
+:root {
+    --shopclues-main-bg: #ffffff;
+    --shopclues-red-orange: #ff6e40;
+    --shopclues-dark-red: #d94b15;
+    --shopclues-teal-light: #00a69a;
+    --text-dark: #333333;
+    --text-grey: #666666;
+    --text-white: #ffffff;
+}
+
+/* -------------------- BASE STYLES -------------------- */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+}
+
+/* -------------------- NAVBAR -------------------- */
+.navbar-custom {
+    background-color: var(--shopclues-main-bg);
+    padding: 8px 0;
+    transition: all 0.3s ease;
+    z-index: 1020;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.shopclues-logo {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: var(--text-dark) !important;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+}
+
+.shopclues-logo:hover {
+    transform: scale(1.05);
+    color: var(--text-dark) !important;
+}
+
+/* -------------------- SEARCH BAR ANIMATIONS -------------------- */
+.search-input-desktop {
+    transition: all 0.3s ease !important;
+}
+
+.search-input-desktop:focus {
+    border-color: var(--shopclues-red-orange) !important;
+    box-shadow: 0 0 0 2px rgba(255, 110, 64, 0.2) !important;
+    transform: scale(1.02);
+}
+
+/* -------------------- SEARCH SUGGESTIONS DROP DOWN -------------------- */
+.suggestions-dropdown {
+    position: absolute;
+    width: 100%;
+    z-index: 99999;
+    top: 40px;
+    max-height: 350px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid var(--shopclues-red-orange);
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-item {
+    cursor: pointer;
+    color: var(--text-dark);
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+}
+
+.suggestion-item:hover,
+.suggestion-item:focus {
+    background-color: #fff8e8;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+/* Seller Link Animations */
+.seller-link {
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    color: #2c5530;
+}
+
+.seller-link:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.seller-link i {
+    color: #28a745;
+    transition: all 0.3s ease;
+}
+
+.seller-link .small {
+    color: #2c5530;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* Cart Count Animation */
+.cart-count, .cart-count-mobile {
+    background-color: var(--shopclues-dark-red);
+    color: var(--text-white);
+    font-size: 0.7rem;
+    padding: 1px 5px;
+    border-radius: 50%;
+    font-weight: bold;
+    min-width: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Floating Cart Icon (Optional) */
+.floating-cart-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--shopclues-red-orange);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(255, 110, 64, 0.4);
+}
+
+.floating-cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--shopclues-dark-red);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* Enhanced Modal Animations */
+.login-success-modal .modal-content,
+.logout-success-modal .modal-content {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.login-success-modal .fa-check-circle,
+.logout-success-modal .fa-sign-out-alt {
+    font-size: 4.5rem !important;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+/* Bounce animation for success icons */
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Pulse animation for cart */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cart-count.pulse {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Search bar glow effect */
+.search-bar-glow {
+    animation: searchGlow 2s infinite;
+}
+
+@keyframes searchGlow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(255, 110, 64, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 110, 64, 0.8);
+    }
+}
+
+/* -------------------- RESPONSIVE (MOBILE) -------------------- */
+@media (max-width: 992px) {
+    .navbar-custom .container-fluid {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    
+    .search-bar-container-mobile {
+        max-width: 100%;
+        order: 3;
+        margin: 5px 0 !important;
+    }
+
+    .seller-link {
+        display: none !important;
+    }
+}
+
+/* Hover effects for all buttons */
+.account-button, .cart-button, .account-button-mobile, .cart-button-mobile {
+    transition: all 0.3s ease !important;
+}
+
+.account-button:hover, .cart-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth transitions for all interactive elements */
+.nav-link-custom, .location, .search-input, .suggestion-item {
+    transition: all 0.3s ease;
+}
+
+/* Loading animation for search */
+@keyframes searchLoading {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+.search-loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200px 100%;
+    animation: searchLoading 1.5s infinite;
+}

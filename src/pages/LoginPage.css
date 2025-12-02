@@ -1,0 +1,38 @@
+.flipkart-auth-wrapper {
+  min-height: 100vh;
+  background-color: #f1f3f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-box {
+  width: 850px;
+  max-width: 95%;
+  background: white;
+}
+
+.auth-left {
+  background-color: #2874f0;
+}
+
+.auth-left h2 {
+  font-size: 1.6rem;
+}
+
+.auth-left p {
+  font-size: 0.95rem;
+}
+
+button.btn-link {
+  text-decoration: none !important;
+}
+
+@media (max-width: 768px) {
+  .auth-left {
+    display: none;
+  }
+  .auth-box {
+    width: 100%;
+  }
+}

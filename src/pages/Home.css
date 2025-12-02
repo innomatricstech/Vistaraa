@@ -1,0 +1,309 @@
+/* ================================================ */
+/* 🌿 MODERN E-COMMERCE TEAL/GREEN LIGHT THEME */
+/* (Subtle Textured Background)                */
+/* ================================================ */
+:root {
+  --accent-color: #00a8a0; /* Header-இல் உள்ள அடர் பச்சை/Teal நிறம் */
+  --accent-light: #33b8b0;
+  --bg-light: #ffffff; /* Pure white for cards */
+  --bg-main: #fcfdfe; /* Very light, off-white for body background */
+  --text-dark: #212529; /* முக்கிய எழுத்துக்களுக்கு அடர் சாம்பல் */
+  --text-muted: #6c757d; /* இரண்டாம் நிலை எழுத்துக்களுக்கு சாம்பல் */
+  --shadow-soft: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 8px 30px rgba(0, 168, 160, 0.3); /* Teal நிறத்தின் பிரகாசம் */
+}
+
+/* Body-க்கு புதிய பின்னணி வண்ணம் & Texture */
+body {
+  background-color: var(--bg-main); /* லேசான off-white பின்னணி */
+  font-family: "Poppins", sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+
+  /* --- ATTRACTIVE BACKGROUND TEXTURE --- */
+  background-image: radial-gradient(#d3e8e7 1px, transparent 0);
+  background-size: 40px 40px;
+  background-attachment: fixed;
+}
+
+/* ================================================ */
+/* 🏠 HOMEPAGE STRUCTURE */
+/* ================================================ */
+.homepage-content {
+  overflow-x: hidden;
+  color: var(--text-dark);
+}
+
+/* Header gradient - Banner-க்கு கீழே உள்ள பகுதியை லேசான Teal ஆக மாற்றுகிறது */
+.bg-gradient {
+  background: linear-gradient(135deg, var(--bg-light) 0%, #e8f5f4 40%, var(--accent-light) 100%);
+  color: var(--text-dark);
+}
+
+/* Main Section Styling */
+.category-section h2 {
+  color: var(--accent-color); /* Headings-க்கு அடர் பச்சை */
+}
+
+/* ================================================ */
+/* 💫 SECTION CARD STYLES */
+/* ================================================ */
+.deal-section-card {
+  background: var(--bg-light); /* Changed to use --bg-light (pure white) */
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 3rem auto;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s ease;
+  position: relative;
+  max-width: 95%;
+  overflow: hidden;
+  color: var(--text-dark);
+  border: 1px solid #e9ecef;
+}
+
+/* Shine animation overlay (kept for modern effect) */
+.deal-section-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    transparent 100%
+  );
+  transition: all 0.8s ease;
+}
+
+.deal-section-card:hover::after {
+  left: 120%;
+}
+
+/* Lift & glow hover effect - Teal Glow */
+.deal-section-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Headings inside cards */
+.deal-section-card h2,
+.deal-section-card h3 {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.deal-section-card p {
+  color: var(--text-muted);
+}
+
+/* ================================================ */
+/* 🧭 CATEGORY GRID STYLING */
+/* ================================================ */
+.category-grid .col-lg-3 > div {
+  background: var(--bg-light); /* White background for grid items */
+  border-radius: 0.8rem;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #dee2e6;
+  color: var(--text-dark);
+}
+
+.category-grid .col-lg-3 > div:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Inner glow border - uses the new Teal accent */
+.category-grid .col-lg-3 > div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid transparent;
+  background: linear-gradient(
+      45deg,
+      var(--accent-color),
+      rgba(255, 255, 255, 0)
+    )
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.category-grid .col-lg-3 > div:hover::before {
+  border-color: var(--accent-color);
+}
+
+/* Category Titles */
+.category-grid h5,
+.category-grid p {
+  color: var(--text-dark);
+}
+
+/* ================================================ */
+/* ✨ ANIMATIONS (Teal Glow Update) */
+/* ================================================ */
+.banner-fade-in {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Fade-Up for Category Sections (Keep this definition) */
+.category-section {
+  /* This is fine to keep here, the animation delay should be set in React */
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.component-slide-in {
+  animation: slideIn 1.2s ease-out;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.footer-scale-up {
+  animation: scaleUp 1s ease-out;
+}
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.float-pulse {
+  animation: floatPulse 2.5s ease-in-out infinite;
+}
+@keyframes floatPulse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Accent glow for key titles - Teal glow */
+.glow-text {
+  text-shadow: 0 0 10px rgba(0, 168, 160, 0.3); /* Teal glow */
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* ================================================ */
+/* 📱 FULL RESPONSIVE MEDIA QUERIES */
+/* ================================================ */
+
+/* -------------------- Large Devices (Desktop - 1200px and up) -------------------- */
+/* Base styles already cover this */
+
+/* -------------------- Medium Devices (Tablet - max-width: 992px) -------------------- */
+@media (max-width: 992px) {
+  /* Adjust margins and padding for tablets */
+  .deal-section-card {
+    padding: 1.8rem;
+    margin: 2rem auto;
+  }
+  
+  /* Reduce main section heading size slightly */
+  .category-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* -------------------- Small Devices (Mobile Landscape/Tablet Portrait - max-width: 768px) -------------------- */
+@media (max-width: 768px) {
+  /* Smaller padding on cards */
+  .deal-section-card {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  /* Reduce main section heading size */
+  .category-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem !important;
+  }
+
+  /* General header font size adjustment (assuming a header h1 exists) */
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  /* Ensure category grid columns stack appropriately (usually handled by Bootstrap/React-Bootstrap 'xs' property) */
+  .category-grid .col-lg-3 {
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer heading adjustment (assuming a footer h2 exists) */
+  footer h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* -------------------- Extra Small Devices (Mobile Portrait - max-width: 576px) -------------------- */
+@media (max-width: 576px) {
+  /* Smallest padding and margin for phones */
+  .deal-section-card {
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 0.75rem; /* Slightly less rounded corners */
+  }
+
+  /* Smallest main section heading size */
+  .category-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Body background dots can be closer or smaller */
+  body {
+    background-size: 30px 30px;
+  }
+
+  /* Tighter margins between sections */
+  .category-section {
+    margin-bottom: 2rem !important;
+  }
+}

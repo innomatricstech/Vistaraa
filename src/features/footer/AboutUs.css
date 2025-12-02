@@ -1,0 +1,271 @@
+/* --- Base Layout and Colors --- */
+.about-container {
+    background-color: #f7f7f7; 
+    font-family: Arial, sans-serif;
+}
+
+/* --- Header Styling (Consistent with Terms/Privacy) --- */
+.about-header-bg {
+    background-color: #ff6a00; /* Vibrant orange color */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-header-content {
+    max-width: 900px;
+    margin: 0 auto; 
+    /* Ensures the header text content is visible within the container */
+}
+
+.about-icon {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 10px;
+    animation: bounceIn 1s ease-out; /* Animation applied */
+}
+
+.about-header-bg h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+
+/* --- Main Content Styling (Centered White Card) --- */
+.about-main-content {
+    max-width: 900px; 
+    padding: 40px 30px; 
+    margin-top: 30px; 
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: left; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+
+.about-intro .main-policy-title {
+    color: #ff6a00;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --- Mission/Vision Box Styling (White with border/shadow, as seen in screenshot) --- */
+.box-highlight {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.box-highlight:hover {
+    transform: translateY(-3px);
+}
+
+.highlight-title {
+    color: #ff6a00;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.mission-icon, .vision-icon {
+    font-size: 2rem;
+    color: #ff6a00;
+}
+
+/* --- What We Offer Box (Orange/Pink Gradient) --- */
+.about-offer-box {
+    background: linear-gradient(135deg, #ffe0e0, #ff6a001a); /* Light orange/pink gradient */
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.offer-title {
+    color: #ff6a00;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.offer-list {
+    list-style: none;
+    padding-left: 0;
+    /* Center the list block by treating it as inline */
+    display: inline-block; 
+    text-align: left;
+}
+
+.offer-list li {
+    padding: 5px 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.offer-list li .fa-check-circle {
+    color: #ff6a00;
+    font-size: 1.1rem;
+}
+
+/* --- Team Section Styling --- */
+.team-section {
+    padding: 30px 0;
+}
+
+.team-heading {
+    color: #ff6a00;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.team-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.team-member {
+    padding: 15px;
+}
+
+.team-circle-img {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ff6a00;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-placeholder {
+    font-size: 4rem;
+    color: #ff6a00;
+}
+
+.member-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.member-title {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Join Our Journey Box --- */
+.join-journey-box {
+    background: linear-gradient(135deg, #ffe0e0, #ff6a001a);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+    animation: fadeIn 2s ease-out; 
+}
+
+.join-icon {
+    font-size: 3rem;
+    display: block;
+    margin: 0 auto 10px;
+    color: #ff6a00;
+}
+
+.join-journey-box h3 {
+    color: #ff6a00;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.join-btn-primary {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+    color: white; 
+    font-weight: 600; 
+    padding: 10px 30px; 
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+.join-btn-primary:hover {
+    background-color: #cc5400;
+    border-color: #cc5400;
+    transform: scale(1.05);
+}
+
+/* --- Scroll-to-Top Button --- */
+.back-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6a00;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top-button:hover {
+    background-color: #cc5400;
+    transform: scale(1.1);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+/* Animation for Mission/Vision/Offer boxes */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Sequential animation for team members */
+.animated-card {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        transform: scale(1);
+    }
+}

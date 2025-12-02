@@ -1,0 +1,52 @@
+.admin-dashboard {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar .nav-link {
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #343a40;
+  color: #ffc107;
+}
+
+/* Main Content */
+.main-content {
+  background-color: #fff;
+}
+
+.search-input {
+  width: 250px;
+}
+
+.stat-card {
+  border-left: 4px solid #ffc107;
+  transition: all 0.2s ease-in-out;
+}
+
+.stat-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.table-card {
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}

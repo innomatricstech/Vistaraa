@@ -1,0 +1,187 @@
+/* --- Base Layout and Colors --- */
+.terms-container {
+    background-color: #f7f7f7;
+}
+
+/* --- Header Styling --- */
+.terms-header-bg {
+    background-color: #ff6a00; /* Vibrant orange color */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.terms-header-content {
+    max-width: 900px;
+    margin: 0 auto; /* Centers the header text content */
+}
+
+.terms-icon {
+    font-size: 5rem;
+    display: block;
+    margin-bottom: 10px;
+    animation: bounceIn 1s ease-out;
+}
+
+.terms-header-bg h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* --- Main Content Styling (Centered Block) --- */
+.terms-main-content {
+    max-width: 900px; /* Sets the maximum width of the white card */
+    padding: 40px 15px;
+    margin-top: 30px; /* Pulls content up over the header shadow */
+    position: relative;
+    background-color: white;
+    border-radius: 8px;
+    /* Centering the block itself */
+    margin-left: auto; 
+    margin-right: auto;
+    /* Default text alignment for H2, P, and H3 */
+    text-align: center; /* Keep text left-aligned like a document */
+}
+
+.terms-intro h2 {
+    color: #ff6a00;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+/* --- Section Styling --- */
+.terms-section {
+    padding: 20px 0;
+}
+
+.section-title-highlight {
+    color: #ff6a00;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.section-title-highlight:hover {
+    color: #cc5400;
+}
+
+.terms-list {
+    list-style: none;
+    text-align: center; 
+}
+
+.terms-list li {
+    padding: 8px 0;
+    line-height: 1.6;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.terms-list li::before {
+    content: "•";
+    color: #ff6a00;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+/* --- Acceptance Box Styling --- */
+.acceptance-box {
+    background-color: #ffe6e6;
+    border: 1px solid #ff9999;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center; /* This box's content should be centered */
+    margin-top: 40px;
+    animation: fadeIn 2s ease-out; /* Animation applied */
+}
+
+.acceptance-box h3 {
+    color: #ff6a00;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.acceptance-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+    color: #ff6a00;
+}
+
+/* --- Button Styling --- */
+.terms-btn-primary {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.terms-btn-primary:hover {
+    background-color: #cc5400;
+    border-color: #cc5400;
+    transform: scale(1.05);
+}
+
+.terms-btn-secondary {
+    color: #ff6a00;
+    border-color: #ff6a00;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.terms-btn-secondary:hover {
+    background-color: #ff6a00;
+    color: white;
+}
+
+.effective-date {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Scroll-to-Top Button --- */
+.back-to-top-button a {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6a00;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+.back-to-top-button a:hover {
+    background-color: #cc5400;
+    transform: scale(1.1);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
