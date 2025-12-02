@@ -1,0 +1,27 @@
+/* src/components/PrivacyPolicy.css */
+.policy-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+.policy-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.policy-title svg {
+  font-size: 22px;
+}
+.policy-card ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.red-highlight {
+  border-left: 4px solid #ef4444;
+  background: #fff7f7;
+}
+
+/* Reuse help-card and scroll-to-top-btn styles from ShippingPolicy if you already have them */

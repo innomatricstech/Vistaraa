@@ -46,6 +46,7 @@ import Faqs from "./features/footer/Faqs";
 
 // ✅ New Contact Form Page
 import ContactForm from "../src/features/footer/ContactSupport";  
+import PrivacyPolicy from "./features/footer/PrivacyPolicy";
 
 // ✅ Temporary Admin Pages
 const AdminLogin = () => <div className="text-center p-5">Admin Login Page</div>;
@@ -96,9 +97,10 @@ const AppContent = () => {
                     <Route path="/personal-care" element={<PersonalCare />} />
 
                     {/* 🔹 Footer Policy Pages */}
-                    <Route path="/return-policy" element={<ReturnPolicy />} />
-                    <Route path="/shipping-policy" element={<ShippingPolicy />} />
-                    <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                    <Route path="/returnpolicy" element={<ReturnPolicy />} />
+                    <Route path="/shippingpolicy" element={<ShippingPolicy />} />
+                    <Route path="/termsconditions" element={<TermsAndConditions />} />
+                     <Route path="/privacypolicy" element={<PrivacyPolicy/>} />
                     {/* <Route path="/about-us" element={<AboutUs />} /> */}
                     <Route path="/faqs" element={<Faqs />} />
 

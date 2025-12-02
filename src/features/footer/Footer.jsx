@@ -60,9 +60,10 @@ const Footer = () => {
           <div className="col-md-3 col-sm-6 mb-4">
             <h6 className="footer-heading mb-2">Useful Links</h6>
             <ul className="list-unstyled footer-link-list">
-              <li><Link to="/return-policy" className="text-light text-decoration-none">Return Policy</Link></li>
-              <li><Link to="/shipping-policy" className="text-light text-decoration-none">Shipping Policy</Link></li>
-              <li><Link to="/terms-and-conditions" className="text-light text-decoration-none">Terms & Conditions</Link></li>
+              <li><Link to="/returnpolicy" className="text-light text-decoration-none">Return Policy</Link></li>
+              <li><Link to="/shippingpolicy" className="text-light text-decoration-none">Shipping Policy</Link></li>
+              <li><Link to="/termsconditions" className="text-light text-decoration-none">Terms & Conditions</Link></li>
+              <li><Link to="/privacypolicy" className="text-light text-decoration-none">Privacy Policy</Link></li>
               {/* <li>
                 <a href="https://wa.me/+91 70195 12273" target="_blank" rel="noopener noreferrer" className="text-light text-decoration-none">
                   Chat With Us
